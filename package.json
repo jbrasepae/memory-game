@@ -2,7 +2,7 @@
   "name": "jeanette-rasepae-222-memory-game-in-vanilla",
   "version": "1.0.0",
   "description": "Memory game in vanilla js (222)\r For raw project instructions see: https://raw.githubusercontent.com/Umuzi-org/tech-department/master/content/projects/memory-game-vanilla/_index.md",
-  "main": "index.js",
+  "main": "memory_game.js",
   "scripts": {
     "test": "jasmine"
   },
