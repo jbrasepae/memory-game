@@ -5,7 +5,7 @@ let firstCard;
 let secondCard;
 
  function flipCard(){
-    this.classList.toggle('turn');
+    this.classList.add('flip');
 
     if(flippedCard){
         flippedCard = false;
@@ -17,17 +17,17 @@ let secondCard;
         flippedCard = true;
         secondCard = this;
 
-        matching();    
+        checkForMatch();    
     }
 }
 
-function matching(){
-    if(firstCard.dataset.name !== secondCard.dataset.name){
-        flipBackCards();
+function checkForMatch(){
+    if(firstCard.dataset.name === secondCard.dataset.name){
+        freezeCards();
     }
 
     else{ 
-        freezeCards();
+        flipBackCards();
     }
 
 }
@@ -39,12 +39,10 @@ function freezeCards(){
 
 function flipBackCards(){
     setTimeout(() => {
-        firstCard.classList.remove('turn');
-        secondCard.classList.remove('turn');
-    }, 900);
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+    }, 1500);
 }
-
-
 
 (function shuffle(){
     cards.forEach(card => {

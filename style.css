@@ -4,17 +4,8 @@
     box-sizing: border-box; 
 }
 
-header{
-    color:#000;
-        background-color: black;
-        opacity: 0.5;
-        height: 80px;
-        position: relative;
-        margin-bottom: 0; 
-}
-
 .gameName{
-        color:rgb(0, 108, 209);
+        color:rgb(21, 0, 209);
         margin-left: 10px;
         margin-top: 1.5%;
         float: center;
@@ -36,8 +27,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
-
-    
+   
 }
 
 .card{
@@ -53,16 +43,11 @@ body{
 
 .card:active{
     transform: scale(.97);
-    transition: transform.3s
+    transition: transform .3s
 }
 .card.flip{
     transform: rotateY(180deg);
 }
-
-/* images{
-    width: 100px;
-    height: 100px;
-} */
 
 .front-face, .back-face{
     width: 100%;
@@ -73,8 +58,8 @@ body{
     background: blue;
     backface-visibility: hidden;
    
-
 }
+
 .back-face{
     transform: rotateY(180deg);
 }
