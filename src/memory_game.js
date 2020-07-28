@@ -10,24 +10,26 @@ let secondCard;
     if(flippedCard){
         flippedCard = false;
         firstCard = this;
-
     }
-
     else{
         flippedCard = true;
         secondCard = this;
 
         checkForMatch();    
     }
+    // if (flippedCard == cards.length)
+    // document.getElementById("board").innerHTML =
+    //   '<h1>🥇<u>Well done! you won</u>🥇</h1></br><button onclick="startGame()">Start New Game...</button>';
 }
 
 function checkForMatch(){
     if(firstCard.dataset.name === secondCard.dataset.name){
+        alert('you have found match')
         freezeCards();
     }
-
     else{ 
-        flipBackCards();
+        alert('sorry, try again')
+        unflipCards();
     }
 
 }
@@ -37,11 +39,11 @@ function freezeCards(){
     secondCard.removeEventListener('click', flipCard);
 }
 
-function flipBackCards(){
+function unflipCards(){
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-    }, 1500);
+    }, 1000);
 }
 
 (function shuffle(){
