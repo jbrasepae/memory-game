@@ -16,22 +16,16 @@ let secondCard;
         secondCard = this;
 
         checkForMatch();    
-    }
-    // if (flippedCard == cards.length)
-    // document.getElementById("board").innerHTML =
-    //   '<h1>🥇<u>Well done! you won</u>🥇</h1></br><button onclick="startGame()">Start New Game...</button>';
+    }  
 }
 
 function checkForMatch(){
     if(firstCard.dataset.name === secondCard.dataset.name){
-        alert('you have found match')
         freezeCards();
     }
     else{ 
-        alert('sorry, try again')
         unflipCards();
     }
-
 }
 
 function freezeCards(){
@@ -54,4 +48,3 @@ function unflipCards(){
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard))
-
