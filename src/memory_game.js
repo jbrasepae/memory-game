@@ -48,3 +48,5 @@ function unflipCards(){
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard))
+
+
