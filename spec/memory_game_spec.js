@@ -27,6 +27,10 @@ const {JSDOM} = require('jsdom');
             const cards = browser.window.document.querySelectorAll('.card');
 			expect(cards.length).toEqual(12)
 		});
-	
+		it("should call checkForMatch function after 1000 milliseconds", function() {
+			setTimeout(function() {
+			timer();
+			},1000);
+		})
 	});
 	
